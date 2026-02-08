@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'com.thefokysnik'
-version = '2.1'
+version = '2.3'
 
 java {
     sourceCompatibility = JavaVersion.VERSION_21

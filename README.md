@@ -112,24 +112,6 @@ The compiled mod will be automatically placed in your Hytale mods directory.
 - **Bronze gear:** Workbench / Weapon Bench / Armor Bench
 - **Onyxium gear:** Tier 2 Workbench / Weapon Bench / Armor Bench
 
-## ⚠️ Known Issues
-
-Bronze tools currently use placeholder textures from existing in-game assets (Adamantite/Copper). Custom bronze textures will be added in future updates.
-
 ## 📝 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 👤 Author
-
-**TheFokysnik**
-
-- GitHub: [@TheFokysnik](https://github.com/TheFokysnik)
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/TheFokysnik/Bronze-Coal-Onyxium-Crafting/issues).
-
-## ⭐ Show Your Support
-
-Give a ⭐️ if this project helped you!
