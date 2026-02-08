@@ -1,0 +1,164 @@
+{
+	"$NodeId": "Constant.Assignments-tin-plains1-001",
+	"Type": "Constant",
+	"ExportAs": "Plains1_Tin",
+	"Prop": {
+		"$NodeId": "Density.Prop-tin-plains1-001",
+		"Type": "Density",
+		"Skip": false,
+		"Pattern": {
+			"$NodeId": "Ceiling.Pattern-tin-plains1-001",
+			"Type": "Ceiling",
+			"Skip": false,
+			"Ceiling": {
+				"$NodeId": "BlockSet.Pattern-tin-plains1-001",
+				"Type": "BlockSet",
+				"Skip": false,
+				"BlockSet": {
+					"$NodeId": "BlockSet.BlockMask-tin-plains1-001",
+					"Inclusive": true,
+					"Materials": [
+						{
+							"$NodeId": "Material-tin-plains1-stone",
+							"Solid": "Rock_Stone"
+						},
+						{
+							"$NodeId": "Material-tin-plains1-marble",
+							"Solid": "Rock_Marble"
+						}
+					]
+				}
+			},
+			"Origin": {
+				"$NodeId": "BlockType.Pattern-tin-plains1-001",
+				"Type": "BlockType",
+				"Skip": false,
+				"Material": {
+					"$NodeId": "Material-tin-plains1-empty",
+					"Solid": "Empty"
+				}
+			}
+		},
+		"Scanner": {
+			"$NodeId": "ColumnLinear.Scanner-tin-plains1-001",
+			"Type": "ColumnLinear",
+			"Skip": false,
+			"MaxY": 80,
+			"MinY": 5,
+			"RelativeToPosition": false,
+			"BaseHeightName": "Bedrock",
+			"TopDownOrder": false,
+			"ResultCap": 1
+		},
+		"Material": {
+			"$NodeId": "SolidityMaterialProvider-tin-plains1-001",
+			"Type": "Solidity",
+			"Solid": {
+				"$NodeId": "ConstantMaterialProvider-tin-plains1-001",
+				"Type": "Constant",
+				"Material": {
+					"$NodeId": "Material-tin-plains1-result",
+					"Solid": "Ore_Tin_Stone"
+				}
+			}
+		},
+		"Density": {
+			"$NodeId": "SumDensityNode-tin-plains1-001",
+			"Type": "Sum",
+			"Skip": false,
+			"Inputs": [
+				{
+					"$NodeId": "NormalizerDensityNode-tin-plains1-001",
+					"Type": "Normalizer",
+					"Skip": false,
+					"FromMin": -1,
+					"FromMax": 1,
+					"ToMin": -0.3,
+					"ToMax": 0.3,
+					"Inputs": [
+						{
+							"$NodeId": "SimplexNoise3DDensityNode-tin-plains1-001",
+							"Type": "SimplexNoise3D",
+							"Skip": false,
+							"Lacunarity": 2,
+							"Persistence": 0.5,
+							"Octaves": 1,
+							"ScaleXZ": 4,
+							"ScaleY": 4,
+							"Seed": "TinOre"
+						}
+					]
+				},
+				{
+					"$NodeId": "NormalizerDensityNode-tin-plains1-002",
+					"Type": "Normalizer",
+					"Skip": false,
+					"FromMin": -1,
+					"FromMax": 1,
+					"ToMin": -0.7,
+					"ToMax": 0.7,
+					"Inputs": [
+						{
+							"$NodeId": "Anchor.Density-tin-plains1-001",
+							"Type": "Anchor",
+							"Skip": false,
+							"Reversed": false,
+							"Inputs": [
+								{
+									"$NodeId": "Cube.Density-tin-plains1-001",
+									"Type": "Cube",
+									"Skip": false,
+									"Curve": {
+										"$NodeId": "ManualCurve-tin-plains1-001",
+										"Type": "Manual",
+										"Points": [
+											{
+												"$NodeId": "CurvePoint-tin-plains1-001",
+												"In": 0,
+												"Out": 1
+											},
+											{
+												"$NodeId": "CurvePoint-tin-plains1-002",
+												"In": 3,
+												"Out": -2
+											}
+										]
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		"PlacementMask": {
+			"$NodeId": "BlockMask-tin-plains1-001",
+			"DontPlace": {
+				"$NodeId": "BlockSet.BlockMask-tin-plains1-dontplace",
+				"Inclusive": true,
+				"Materials": [
+					{
+						"$NodeId": "Material-tin-plains1-dontplace",
+						"Solid": "Empty"
+					}
+				]
+			},
+			"DontReplace": {
+				"$NodeId": "BlockSet.BlockMask-tin-plains1-dontreplace",
+				"Inclusive": true,
+				"Materials": [
+					{
+						"$NodeId": "Material-tin-plains1-dontreplace",
+						"Solid": "Empty"
+					}
+				]
+			}
+		},
+		"Range": {
+			"$NodeId": "Point3D-tin-plains1-001",
+			"X": 2,
+			"Y": 2,
+			"Z": 2
+		}
+	}
+}

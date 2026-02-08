@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.thefokysnik'
+version = '2.1'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly files('libs/HytaleServer.jar')
+}
+
+jar {
+    archiveBaseName = 'BronzeOnyxiumCrafting'
+    destinationDirectory = file(System.getProperty("user.home") + "/Library/Application Support/Hytale/UserData/Mods")
+    
+    manifest {
+        attributes(
+            'Plugin-Class': 'com.thefokysnik.bronzecrafting.BronzeCrafting'
+        )
+    }
+}

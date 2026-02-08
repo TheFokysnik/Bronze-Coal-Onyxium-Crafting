@@ -1,0 +1,17 @@
+{
+  "Group": "thefokysnik",
+  "Name": "BronzeOnyxiumCrafting",
+  "Version": "2.1",
+  "Description": "Adds Bronze tier, Coal fuel (5x charcoal), Onyxium gear, and auto-ignition for furnaces. Complete equipment sets included!",
+  "Authors": [
+    {
+      "Name": "TheFokysnik"
+    }
+  ],
+  "ServerVersion": "*",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "DisabledByDefault": false,
+  "IncludesAssetPack": true,
+  "Main": "com.thefokysnik.bronzecrafting.BronzeCrafting"
+}

@@ -1,0 +1,160 @@
+{
+	"$NodeId": "Constant.Assignments-onyxium-desert1-001",
+	"Type": "Constant",
+	"ExportAs": "Desert1_Onyxium",
+	"Prop": {
+		"$NodeId": "Density.Prop-onyxium-desert1-001",
+		"Type": "Density",
+		"Skip": false,
+		"Pattern": {
+			"$NodeId": "Ceiling.Pattern-onyxium-desert1-001",
+			"Type": "Ceiling",
+			"Skip": false,
+			"Ceiling": {
+				"$NodeId": "BlockSet.Pattern-onyxium-desert1-001",
+				"Type": "BlockSet",
+				"Skip": false,
+				"BlockSet": {
+					"$NodeId": "BlockSet.BlockMask-onyxium-desert1-001",
+					"Inclusive": true,
+					"Materials": [
+						{
+							"$NodeId": "Material-onyxium-desert1-sandstone",
+							"Solid": "Rock_Sandstone"
+						}
+					]
+				}
+			},
+			"Origin": {
+				"$NodeId": "BlockType.Pattern-onyxium-desert1-001",
+				"Type": "BlockType",
+				"Skip": false,
+				"Material": {
+					"$NodeId": "Material-onyxium-desert1-empty",
+					"Solid": "Empty"
+				}
+			}
+		},
+		"Scanner": {
+			"$NodeId": "ColumnLinear.Scanner-onyxium-desert1-001",
+			"Type": "ColumnLinear",
+			"Skip": false,
+			"MaxY": 35,
+			"MinY": 5,
+			"RelativeToPosition": false,
+			"BaseHeightName": "Bedrock",
+			"TopDownOrder": false,
+			"ResultCap": 1
+		},
+		"Material": {
+			"$NodeId": "SolidityMaterialProvider-onyxium-desert1-001",
+			"Type": "Solidity",
+			"Solid": {
+				"$NodeId": "ConstantMaterialProvider-onyxium-desert1-001",
+				"Type": "Constant",
+				"Material": {
+					"$NodeId": "Material-onyxium-desert1-result",
+					"Solid": "Ore_Onyxium"
+				}
+			}
+		},
+		"Density": {
+			"$NodeId": "SumDensityNode-onyxium-desert1-001",
+			"Type": "Sum",
+			"Skip": false,
+			"Inputs": [
+				{
+					"$NodeId": "NormalizerDensityNode-onyxium-desert1-001",
+					"Type": "Normalizer",
+					"Skip": false,
+					"FromMin": -1,
+					"FromMax": 1,
+					"ToMin": -0.3,
+					"ToMax": 0.3,
+					"Inputs": [
+						{
+							"$NodeId": "SimplexNoise3DDensityNode-onyxium-desert1-001",
+							"Type": "SimplexNoise3D",
+							"Skip": false,
+							"Lacunarity": 2,
+							"Persistence": 0.5,
+							"Octaves": 1,
+							"ScaleXZ": 4,
+							"ScaleY": 4,
+							"Seed": "OnyxiumOre"
+						}
+					]
+				},
+				{
+					"$NodeId": "NormalizerDensityNode-onyxium-desert1-002",
+					"Type": "Normalizer",
+					"Skip": false,
+					"FromMin": -1,
+					"FromMax": 1,
+					"ToMin": -0.7,
+					"ToMax": 0.7,
+					"Inputs": [
+						{
+							"$NodeId": "Anchor.Density-onyxium-desert1-001",
+							"Type": "Anchor",
+							"Skip": false,
+							"Reversed": false,
+							"Inputs": [
+								{
+									"$NodeId": "Cube.Density-onyxium-desert1-001",
+									"Type": "Cube",
+									"Skip": false,
+									"Curve": {
+										"$NodeId": "ManualCurve-onyxium-desert1-001",
+										"Type": "Manual",
+										"Points": [
+											{
+												"$NodeId": "CurvePoint-onyxium-desert1-001",
+												"In": 0,
+												"Out": 1
+											},
+											{
+												"$NodeId": "CurvePoint-onyxium-desert1-002",
+												"In": 3,
+												"Out": -2
+											}
+										]
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		"PlacementMask": {
+			"$NodeId": "BlockMask-onyxium-desert1-001",
+			"DontPlace": {
+				"$NodeId": "BlockSet.BlockMask-onyxium-desert1-dontplace",
+				"Inclusive": true,
+				"Materials": [
+					{
+						"$NodeId": "Material-onyxium-desert1-dontplace",
+						"Solid": "Empty"
+					}
+				]
+			},
+			"DontReplace": {
+				"$NodeId": "BlockSet.BlockMask-onyxium-desert1-dontreplace",
+				"Inclusive": true,
+				"Materials": [
+					{
+						"$NodeId": "Material-onyxium-desert1-dontreplace",
+						"Solid": "Empty"
+					}
+				]
+			}
+		},
+		"Range": {
+			"$NodeId": "Point3D-onyxium-desert1-001",
+			"X": 2,
+			"Y": 2,
+			"Z": 2
+		}
+	}
+}

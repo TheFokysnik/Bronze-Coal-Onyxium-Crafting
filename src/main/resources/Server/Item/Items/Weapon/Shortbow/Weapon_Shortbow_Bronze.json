@@ -1,0 +1,157 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Weapon_Shortbow_Bronze.name"
+  },
+  "Parent": "Template_Weapon_Shortbow",
+  "Quality": "Uncommon",
+  "Model": "Items/Weapons/Bow/Cobalt.blockymodel",
+  "Texture": "Items/Weapons/Bow/Bronze_Texture.png",
+  "Icon": "Icons/ItemsGenerated/Weapon_Bow_Bronze.png",
+  "ItemLevel": 25,
+  "Recipe": {
+    "TimeSeconds": 3,
+    "KnowledgeRequired": false,
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Bronze",
+        "Quantity": 5
+      },
+      {
+        "ItemId": "Ingredient_Leather_Light",
+        "Quantity": 2
+      },
+      {
+        "ItemId": "Ingredient_Fabric_Scrap_Linen",
+        "Quantity": 2
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "Weapon_Bow"
+        ],
+        "Id": "Weapon_Bench"
+      }
+    ]
+  },
+  "InteractionVars": {
+    "Primary_Shoot_Damage_Strength_0": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Shortbow_Primary_Shoot_Damage_Strength_0",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 6
+            }
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Damage_Strength_1": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Shortbow_Primary_Shoot_Damage_Strength_1",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 11
+            }
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Damage_Strength_2": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Shortbow_Primary_Shoot_Damage_Strength_2",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 14
+            }
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Damage_Strength_3": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Shortbow_Primary_Shoot_Damage_Strength_3",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 18
+            }
+          }
+        }
+      ]
+    },
+    "Primary_Shoot_Damage_Strength_4": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Shortbow_Primary_Shoot_Damage_Strength_4",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 21
+            }
+          },
+          "TargetedDamage": {
+            "Head": {
+              "DamageCalculator": {
+                "BaseDamage": {
+                  "Projectile": 27
+                }
+              },
+              "DamageEffects": {
+                "Knockback": {
+                  "Type": "Force",
+                  "VelocityConfig": {
+                    "AirResistance": 0.99,
+                    "AirResistanceMax": 0.98,
+                    "GroundResistance": 0.94,
+                    "GroundResistanceMax": 0.3,
+                    "Threshold": 3.0,
+                    "Style": "Linear"
+                  },
+                  "Direction": { "X": 0.0, "Y": 0.5, "Z": -1 },
+                  "Force": 8,
+                  "VelocityType": "Add"
+                },
+                "WorldParticles": [
+                  {
+                    "SystemId": "Impact_Critical",
+                    "Scale": 1,
+                    "RotationOffset": { "Yaw": 180, "Pitch": 0, "Roll": 0 }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Signature_Volley_Damage": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Shortbow_Signature_Volley_Damage",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Projectile": 15
+            }
+          }
+        }
+      ]
+    },
+    "Guard_Wield": {
+      "Interactions": [
+        {
+          "Parent": "Weapon_Shortbow_Secondary_Guard_Wield",
+          "StaminaCost": {
+            "Value": 11,
+            "CostType": "Damage"
+          }
+        }
+      ]
+    }
+  },
+  "MaxDurability": 135,
+  "DurabilityLossOnHit": 0.58
+}

@@ -1,0 +1,31 @@
+{
+  "Parent": "Template_Weapon_Mace",
+  "TranslationProperties": {"Name": "server.items.Weapon_Mace_Onyxium.name"},
+  "Model": "Items/Weapons/Mace/Onyxium.blockymodel",
+  "Texture": "Items/Weapons/Mace/Onyxium_Texture.png",
+  "Icon": "Icons/ItemsGenerated/Weapon_Mace_Onyxium.png",
+  "Quality": "Epic",
+  "ItemLevel": 20,
+  "MaxDurability": 180,
+  "Recipe": {
+    "TimeSeconds": 4,
+    "KnowledgeRequired": false,
+    "Input": [
+      {"ItemId": "Ingredient_Bar_Onyxium", "Quantity": 5},
+      {"ItemId": "Ingredient_Leather_Heavy", "Quantity": 2},
+      {"ItemId": "Ingredient_Fabric_Scrap_Linen", "Quantity": 2}
+    ],
+    "BenchRequirement": [
+      {"Type": "Crafting", "Categories": ["Weapon_Mace"], "Id": "Weapon_Bench", "RequiredTierLevel": 2}
+    ]
+  },
+  "InteractionVars": {
+    "Swing_Left_Damage": {"Interactions": [{"Parent": "Weapon_Mace_Primary_Swing_Left_Damage", "DamageCalculator": {"BaseDamage": {"Physical": 23}}, "DamageEffects": {"WorldSoundEventId": "SFX_Mace_T2_Impact", "LocalSoundEventId": "SFX_Mace_T2_Impact"}}]},
+    "Swing_Right_Damage": {"Interactions": [{"Parent": "Weapon_Mace_Primary_Swing_Right_Damage", "DamageCalculator": {"BaseDamage": {"Physical": 23}}, "DamageEffects": {"WorldSoundEventId": "SFX_Mace_T2_Impact", "LocalSoundEventId": "SFX_Mace_T2_Impact"}}]},
+    "Swing_Up_Left_Damage": {"Interactions": [{"Parent": "Weapon_Mace_Primary_Swing_Up_Left_Damage", "DamageCalculator": {"BaseDamage": {"Physical": 23}}, "DamageEffects": {"WorldSoundEventId": "SFX_Mace_T2_Impact", "LocalSoundEventId": "SFX_Mace_T2_Impact"}}]},
+    "Swing_Left_Charged_Damage": {"Interactions": [{"Parent": "Weapon_Mace_Primary_Swing_Left_Charged_Damage", "DamageCalculator": {"BaseDamage": {"Physical": 41}}, "EntityStatsOnHit": [{"EntityStatId": "SignatureEnergy", "Amount": 2}], "DamageEffects": {"WorldSoundEventId": "SFX_Mace_T2_Impact", "LocalSoundEventId": "SFX_Mace_T2_Impact"}}]},
+    "Swing_Right_Charged_Damage": {"Interactions": [{"Parent": "Weapon_Mace_Primary_Swing_Right_Charged_Damage", "DamageCalculator": {"BaseDamage": {"Physical": 41}}, "EntityStatsOnHit": [{"EntityStatId": "SignatureEnergy", "Amount": 2}], "DamageEffects": {"WorldSoundEventId": "SFX_Mace_T2_Impact", "LocalSoundEventId": "SFX_Mace_T2_Impact"}}]},
+    "Swing_Up_Left_Charged_Damage": {"Interactions": [{"Parent": "Weapon_Mace_Primary_Swing_Up_Left_Charged_Damage", "DamageCalculator": {"BaseDamage": {"Physical": 41}}, "EntityStatsOnHit": [{"EntityStatId": "SignatureEnergy", "Amount": 2}], "DamageEffects": {"WorldSoundEventId": "SFX_Mace_T2_Impact", "LocalSoundEventId": "SFX_Mace_T2_Impact"}}]},
+    "Groundslam_Damage": {"Interactions": [{"Parent": "Weapon_Mace_Signature_Groundslam_Damage", "DamageCalculator": {"BaseDamage": {"Physical": 93}}, "EntityStatsOnHit": [], "DamageEffects": {"WorldSoundEventId": "SFX_Mace_T2_Impact", "LocalSoundEventId": "SFX_Mace_T2_Impact"}}]}
+  }
+}

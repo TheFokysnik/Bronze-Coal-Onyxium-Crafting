@@ -1,0 +1,53 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Tool_Hatchet_Onyxium.name"
+  },
+  "Parent": "Tool_Hatchet_Crude",
+  "Model": "Items/Tools/Hatchet/Onyxium.blockymodel",
+  "Texture": "Items/Tools/Hatchet/Onyxium_Texture.png",
+  "Recipe": {
+    "TimeSeconds": 4,
+    "KnowledgeRequired": false,
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Onyxium",
+        "Quantity": 5
+      },
+      {
+        "ItemId": "Ingredient_Leather_Heavy",
+        "Quantity": 2
+      },
+      {
+        "ItemId": "Ingredient_Fabric_Scrap_Linen",
+        "Quantity": 2
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Id": "Workbench",
+        "Type": "Crafting",
+        "Categories": ["Workbench_Tools"],
+        "RequiredTierLevel": 2
+      }
+    ]
+  },
+  "Tool": {
+    "Specs": [
+      {"Power": 1, "GatherType": "SoftBlocks"},
+      {"Power": 0.05, "GatherType": "Soils"},
+      {"Power": 0.5, "GatherType": "Woods"},
+      {"Power": 0.05, "GatherType": "Rocks"},
+      {"Power": 0.5, "GatherType": "Benches"},
+      {"Power": 0.017, "GatherType": "VolcanicRocks"}
+    ],
+    "DurabilityLossBlockTypes": [
+      {
+        "BlockSets": ["Stone", "Rock", "Ores", "Soil"],
+        "DurabilityLossOnHit": 0.25
+      }
+    ]
+  },
+  "Icon": "Icons/ItemsGenerated/Tool_Hatchet_Onyxium.png",
+  "MaxDurability": 450,
+  "Quality": "Epic"
+}
