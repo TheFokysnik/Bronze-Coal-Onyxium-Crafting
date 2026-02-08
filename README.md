@@ -1,8 +1,9 @@
 # Bronze & Onyxium Crafting
 
-[![Version](https://img.shields.io/badge/version-2.3-blue.svg)](https://github.com/TheFokysnik/Bronze-Coal-Onyxium-Crafting)
-[![Hytale](https://img.shields.io/badge/Hytale-Server%20Mod-orange.svg)](https://hytale.com/)
-[![Java](https://img.shields.io/badge/Java-21-red.svg)](https://www.oracle.com/java/)
+![Hytale Server Mod](https://img.shields.io/badge/Hytale-Server%20Mod-0ea5e9?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-2.3.0-10b981?style=for-the-badge)
+![Java](https://img.shields.io/badge/Java-21+-f97316?style=for-the-badge&logo=openjdk&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-a855f7?style=for-the-badge)
 
 A comprehensive crafting expansion mod for Hytale that introduces a complete **Bronze tier**, makes **Onyxium** gear fully craftable, adds **Coal** as a superior fuel, and features **auto-igniting furnaces**!
 
